@@ -4,12 +4,14 @@ import java.util.Scanner;
 
 public class Main {
     private static Scanner scanner;
+    private static Trade trade;
 
     public static void main(String[] args) {
 
-        List<Car> availableCars = new ArrayList<>();
-        availableCars.add(new Car("Ford", 100000, "czerwony", "kompaktowy", 20000, true, true, true, true, true, true, 200));
-        availableCars.add(new Car("Toyota", 50000, "niebieski", "miejski", 30000, true, true, true, true, true, true, 150));
+        trade = new Trade();
+
+        trade.availableCars.add(new Car("Ford", 100000, "czerwony", "kompaktowy", 20000, true, true, true, true, true, true, 200));
+        trade.availableCars.add(new Car("Toyota", 50000, "niebieski", "miejski", 30000, true, true, true, true, true, true, 150));
 
         while (true) {
             System.out.println("Wybierz opcję:");
@@ -30,7 +32,7 @@ public class Main {
             Integer option = scanner.nextInt();
 
             switch (option) {
-                case 1:
+                case 1: trade.showAvailableCars();
                     break;
                 case 2:
                     break;
