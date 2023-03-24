@@ -12,6 +12,10 @@ public class Main {
 
         trade.availableCars.add(new Car("Ford", 100000, "czerwony", "kompaktowy", 20000, true, true, true, true, true, true, 200));
         trade.availableCars.add(new Car("Toyota", 50000, "niebieski", "miejski", 30000, true, true, true, true, true, true, 150));
+        trade.availableCars.add(new Car("Audi", 40000, "czarny", "kombi", 51200, true, true, true, true, true, true,  600));
+        trade.availableCars.add(new Car("Honda", 140000, "srebrny", "sedan", 33000, true, true, true, true, true, true,  300));
+        trade.availableCars.add(new Car("BMW", 4000, "zielony", "SUV", 500000, true, true, true, true, true, true,  350));
+        trade.availableCars.add(new Car("Nissan", 41000, "biały", "SUV", 55000, true, true, true, true, true, true,  350));
 
         while (true) {
             System.out.println("Wybierz opcję:");
@@ -35,8 +39,11 @@ public class Main {
                 case 1: trade.showAvailableCars();
                     break;
                 case 2:
+                    System.out.println("Podaj indeks samochodu do kupienia: ");
+                    Integer carIndex = scanner.nextInt();
+                    trade.buyCar(carIndex);
                     break;
-                case 3:
+                case 3: trade.showOwnedCars();
                     break;
                 case 4:
                     break;
