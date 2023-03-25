@@ -7,7 +7,6 @@ public class Trade {
     private Integer budget;
     List<Car> availableCars;
     private List<Car> ownedCars;
-    private List<Customer> potentialCustomers;
     private List<Transaction> transactionsHistory;
 
     public Trade() {
