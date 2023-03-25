@@ -71,4 +71,8 @@ public class Trade {
         }
     }
 
+    public void checkBalance() {
+        System.out.println("Stan Twojego konta wynosi: " + budget + " PLN");
+    }
+
 }

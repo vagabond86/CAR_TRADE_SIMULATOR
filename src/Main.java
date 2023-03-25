@@ -8,6 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         trade = new Trade();
+        boolean exit = false;
 
         trade.availableCars.add(new Car("Ford", 100000, "czerwony", "kompaktowy", 20000, true, true, true, true, true, true, 200));
         trade.availableCars.add(new Car("Toyota", 50000, "niebieski", "miejski", 30000, true, true, true, true, true, true, 150));
@@ -16,7 +17,7 @@ public class Main {
         trade.availableCars.add(new Car("BMW", 4000, "zielony", "SUV", 500000, true, true, true, true, true, true, 350));
         trade.availableCars.add(new Car("Nissan", 41000, "biały", "SUV", 55000, true, true, true, true, true, true, 350));
 
-        while (true) {
+        while (!exit) {
             System.out.println("Wybierz opcję:");
             System.out.println("1. Przeglądanie bazy samochodów do kupienia");
             System.out.println("2. Kupowanie samochodu");
@@ -60,7 +61,7 @@ public class Main {
                     break;
                 case 7:
                     break;
-                case 8:
+                case 8: trade.checkBalance();
                     break;
                 case 9:
                     break;
@@ -69,6 +70,8 @@ public class Main {
                 case 11:
                     break;
                 case 12:
+                    System.out.println("Wyjście z programu.");
+                    exit = true;
                     break;
                 default:
                     System.out.println("Niepoprawny wybór. Spróbuj ponownie.");
